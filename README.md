@@ -1,2 +1,1 @@
-This is a readme. Yay!
-And these are changes.
+This is going to be a sweet initiative tracker.
