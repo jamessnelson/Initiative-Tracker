@@ -19,8 +19,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CharacterInput"
-            android:label="@string/title_activity_character_input"></activity>
+            android:name=".CharacterCreationActivity"
+            android:label="@string/title_activity_character_input" />
+        <activity android:name=".CharacterCreation"></activity>
     </application>
 
 </manifest>
