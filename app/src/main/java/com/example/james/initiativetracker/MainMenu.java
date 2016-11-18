@@ -25,7 +25,9 @@ public class MainMenu extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //Display initiative entries
+        for (Initiative init : initiativeList) {
+            //Display each initiative entry
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -42,10 +44,13 @@ public class MainMenu extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == INITIATIVE_REQ_CODE) {
             if (resultCode == RESULT_OK) {
-                //TODO: get new initiative, add to list, sort. Display.
+                Initiative newInit = (Initiative)data.getExtras().get("initiative");
+                initiativeList.add(newInit);
             }
         }
     }
+
+    //TODO: sort initiativeList by roll, display
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
