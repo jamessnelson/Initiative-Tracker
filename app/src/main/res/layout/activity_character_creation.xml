@@ -10,14 +10,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.james.helloworld.CharacterCreation">
 
-    <TableRow>
-        <TextView
-            android:text="Character Name"
-            android:width="0dp"
-            android:layout_weight=".5"
-            />
-        <EditText
-            android:id="@+id/"/>
-    </TableRow>
+    <EditText
+        android:id="@+id/character_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_character_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/initiative_roll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_init_roll"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save"
+        android:onClick=""/>
 
 </TableLayout>
