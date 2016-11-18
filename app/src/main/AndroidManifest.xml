@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.james.helloworld">
+    package="com.example.james.initiativetracker">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainMenu"
+            android:name="com.example.james.initiativetracker.MainMenu"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,7 +21,7 @@
         <activity
             android:name=".CharacterCreationActivity"
             android:label="@string/title_activity_character_input" />
-        <activity android:name=".CharacterCreation"></activity>
+        <activity android:name="com.example.james.initiativetracker.CharacterCreation"></activity>
     </application>
 
 </manifest>

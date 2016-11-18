@@ -1,4 +1,4 @@
-package com.example.james.helloworld;
+package com.example.james.initiativetracker;
 
 import android.os.Parcel;
 import android.os.Parcelable;

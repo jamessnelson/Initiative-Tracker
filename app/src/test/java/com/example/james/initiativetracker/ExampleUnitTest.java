@@ -1,4 +1,4 @@
-package com.example.james.helloworld;
+package com.example.james.initiativetracker;
 
 import org.junit.Test;
 

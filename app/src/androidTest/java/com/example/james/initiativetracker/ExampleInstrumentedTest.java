@@ -1,4 +1,4 @@
-package com.example.james.helloworld;
+package com.example.james.initiativetracker;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

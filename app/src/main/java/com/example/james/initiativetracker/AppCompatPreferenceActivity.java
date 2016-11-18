@@ -1,4 +1,4 @@
-package com.example.james.helloworld;
+package com.example.james.initiativetracker;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
