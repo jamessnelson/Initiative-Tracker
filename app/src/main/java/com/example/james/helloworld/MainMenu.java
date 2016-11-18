@@ -9,9 +9,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainMenu extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE="com.example.james.helloworld.MESSAGE";
+    private List<Initiative> initiativeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +24,14 @@ public class MainMenu extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Display initiative entries
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainMenu.this, CharacterCreation.class);
+
                 startActivity(intent);
             }
         });
@@ -52,8 +59,4 @@ public class MainMenu extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void beginCharacterCreation(View view) {
-        //Pull up character creation view and do stuff
-
-    }
 }
