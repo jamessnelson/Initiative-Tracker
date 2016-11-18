@@ -27,7 +27,7 @@ public class CharacterCreation extends AppCompatActivity {
         layout.addView(textView);
     }
 
-    private List<Initiative> save(List<Initiative> initList) {
+    private void save(List<Initiative> initList) {
         EditText charName = (EditText) findViewById(R.id.character_name);
         String name = charName.getText().toString();
         EditText initRoll = (EditText) findViewById(R.id.initiative_roll);
@@ -38,9 +38,11 @@ public class CharacterCreation extends AppCompatActivity {
         initiative.setName(name);
         initiative.setRoll(roll);
 
-        // Add it to public list
-        initList.add(initiative);
-
-        return initList;
+        //Parcel up init and put it in intent
+        Intent data = new Intent();
+        data.putExtra("initiative", initiative);
+        // Activity finished return ok, return the data
+        setResult(RESULT_OK, data);
+        finish();
     }
 }

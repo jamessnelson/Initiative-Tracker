@@ -15,6 +15,7 @@ import java.util.List;
 public class MainMenu extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE="com.example.james.helloworld.MESSAGE";
+    private static final int INITIATIVE_REQ_CODE = 1;
     private List<Initiative> initiativeList = new ArrayList<>();
 
     @Override
@@ -32,9 +33,18 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainMenu.this, CharacterCreation.class);
 
-                startActivity(intent);
+
+                startActivityForResult(intent, INITIATIVE_REQ_CODE);
             }
         });
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == INITIATIVE_REQ_CODE) {
+            if (resultCode == RESULT_OK) {
+                //TODO: get new initiative, add to list, sort. Display.
+            }
+        }
     }
 
     @Override

@@ -7,7 +7,17 @@ import android.os.Parcelable;
  * Created by james on 11/18/16.
  */
 
-public class Initiative implements Parcelable{
+public class Initiative implements Parcelable {
+
+    public Initiative() {
+        name = "";
+        roll = 0;
+    }
+
+    public Initiative(Parcel source) {
+        name = source.readString();
+        roll = source.readInt();
+    }
 
     private String name;
     private int roll;
@@ -38,4 +48,17 @@ public class Initiative implements Parcelable{
         dest.writeString(name);
         dest.writeInt(roll);
     }
+
+    public static final Parcelable.Creator<Initiative> CREATOR = new Parcelable.Creator<Initiative>() {
+
+        @Override
+        public Initiative createFromParcel(Parcel source) {
+            return new Initiative(source);
+        }
+
+        public Initiative[] newArray(int size) {
+            return new Initiative[size];
+        }
+
+    };
 }
