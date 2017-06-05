@@ -37,11 +37,16 @@ public class CharacterCreation extends AppCompatActivity {
         Initiative initiative = new Initiative();
         initiative.setName(name);
         initiative.setRoll(roll);
+        initList.add(initiative);
+
+        //Sort in initiative order
+        //What up w/comparators? Might have to do longer than the one-line way.
+
 
         //Parcel up init and put it in intent
         Intent data = new Intent();
         data.putExtra("initiative", initiative);
-        // Activity finished return ok, return the data
+        // Activity finished, return ok, return the data
         setResult(RESULT_OK, data);
         finish();
     }

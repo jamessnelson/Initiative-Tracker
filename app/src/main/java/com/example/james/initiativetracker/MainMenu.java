@@ -26,7 +26,7 @@ public class MainMenu extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         for (Initiative init : initiativeList) {
-            //Display each initiative entry
+            //TODO: display initiatives
         }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -49,8 +49,6 @@ public class MainMenu extends AppCompatActivity {
             }
         }
     }
-
-    //TODO: sort initiativeList by roll, display
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
